@@ -22,10 +22,7 @@
             <button type="button" (click)="showDetailModal(item, detailModal)" class="btn btn-secondary">
               <i class="fa-solid fa-eye white"></i>
             </button>
-            <button type="button" (click)="openEditModal(item)" class="btn btn-warning">
-              <i class="fa-solid fa-pencil white"></i>
-            </button>
-            <button type="button" (click)="deleteProduct(item)" class="btn btn-danger">
+            <button type="button" (click)="deleteCategory(item)" class="btn btn-danger">
               <i class="fa-solid fa-trash white"></i>
             </button>
           </td>
@@ -34,12 +31,11 @@
     </tbody>
   </table>
 </div>
-<ng-template #detailModal let-modal>
-  <app-modal>
-    <app-products-form
-      (callParentEvent)="onFormEventCalled($event)"
-      [title]="'Update Product'"
-      [toUpdateProduct]="selectedItem"
-    ></app-products-form>
-  </app-modal>
-</ng-template>
+
+<app-modal #detailModal>
+  <app-categories-form
+    (callParentEvent)="onFormEventCalled($event)"
+    [title]="'Update Category'"
+    [toUpdateCategory]="selectedItem"
+  />
+</app-modal>

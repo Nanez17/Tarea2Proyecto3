@@ -1,6 +1,6 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { BaseService } from './base-service';
-import { IGame } from '../interfaces';
+import { IGame, IResponse } from '../interfaces';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Injectable({
